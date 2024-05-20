@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Bebas+Neue&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito: ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1 .500;1.600; 1.700;1.800;1.900&display=swap'); 
+
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+:root{
+  --primary-color:#10439f;
+}
+
+.container{
+  width: 100%;
+  height: 100vh;
+  background: white;
+  color: white;
+}
+
+.container span{
+  color: #fbbf24;
+}
+
+.container .sidenav{
+  width: 115px;
+  height: 100vh;
+  overflow: hidden;
+  position: fixed;
+  background-color: #000;
+  padding: 16px;
+  transition: width 0.6s;
+}
+
+.container .logo{
+  display:flex;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.container .logo img{
+  width: 50px;
+  margin-left: 15px;
+}
+
+.container .logo h2{
+  font-size: 20px;
+  text-transform: uppercase;
+  margin-top: 10px;
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.3s ease;
+}
+
+.container .logo p{
+  font-size: 14px;
+  font-weight: 600;
+  margin-top: -5px;
+  color: #00ffea;
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.3s ease;
+}
+
+.sidenav .search_bar{
+  margin-top: 32px;
+  position: relative;
+}
+
+.sidenav .search_bar i{
+  position: absolute;
+  color: #000;
+  font-size: 24px;
+  left: 38px;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.sidenav .search_bar input{
+  width: 50%;
+  padding: 11px;
+  padding-left: 40px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  margin-left: 15px;
+}
+
+.sidenav  .menu_text{
+margin-top: 24px;
+}
+
+.sidenav  .menu_text p{
+  font-size: 17px;
+  font-weight: 500;
+  padding-left: 10px;
+}
+
+.sidenav .icon_items ul {
+  list-style: none;
+  margin-top: 32px;
+  padding: 0 10px;
+}
+
+.sidenav  .icon_items ul li{
+  cursor: pointer;
+  background: #000;
+  margin: 4px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+}
+
+.icon_items .active,
+
+.sidenav  .icon_items ul li:hover{
+  background: #fbbf24;
+}
+
+.sidenav  .icon_items ul li i{
+  font-size: 26px;
+  padding: 0 12px;
+}
+
+.sidenav  .icon_items ul li a{
+  text-decoration: none;
+  color: #fff;
+  font-size: 17px;
+  padding: 12px 12px 12px 18px;
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.3s ease;
+}
+
+.container .sidenav:hover{
+  width: 260px;
+}
+
+.container .sidenav:hover .logo h2{
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.container .sidenav:hover .logo p{
+opacity: 1;
+pointer-events: auto;
+}
+
+.container .sidenav:hover .search_bar input{
+  width: 100%;
+  margin-left: 0;
+}
+
+.container .sidenav:hover .search_bar i{
+  left: 20px;
+}
+
+.container .sidenav:hover .icon_items ul li a{
+  opacity: 1;
+  pointer-events: auto;
+}
